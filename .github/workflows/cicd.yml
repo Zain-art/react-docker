@@ -42,7 +42,7 @@ jobs:
       # Build Docker image
       - name: Build Docker image
         run: |
-          docker build -t zainmk280/react-app .
+          docker build -t zainmk280/react-app:v2 .
 
       # Optionally, push the image to Docker Hub (replace with your DockerHub credentials)
       - name: Push Docker image
@@ -53,19 +53,7 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker tag zainmk280/react-app:latest zainmk280/react-app:v1
-          docker push zainmk280/react-app:v1
+          docker tag zainmk280/react-app zainmk280/react-app:v2
+          docker push zainmk280/react-app:v2
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: docker-build  # Ensure docker build is successful before deploying
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Deploy steps (for example, deploying to a cloud service or server)
-      - name: Deploy to production (Placeholder)
-        run: |
-          echo "Deploying the app to production (this is a placeholder step)"
-          # Add your deployment script here, such as SSH deployment or API calls
+  
