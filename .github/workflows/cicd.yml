@@ -53,8 +53,8 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker tag zainmk280/react-app:latest zainmk280/react-app:${{ github.sha }}
-          docker push zainmk280/react-app:${{ github.sha }}
+          docker tag zainmk280/react-app:latest zainmk280/react-app:v1
+          docker push zainmk280/react-app:v1
 
   deploy:
     runs-on: ubuntu-latest
