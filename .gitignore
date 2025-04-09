@@ -23,7 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 node_modules
 npm-debug.log
-Dockerfile
 docker-compose.yml
 .git
 .gitignore
