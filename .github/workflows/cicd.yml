@@ -42,7 +42,7 @@ jobs:
       # Build Docker image
       - name: Build Docker image
         run: |
-          docker buildx build -t zainmk280/react-app:v3 -f Dockerfile .
+           docker  build -t zainmk280/my-react:v3  .
 
       # Optionally, push the image to Docker Hub (replace with your DockerHub credentials)
       - name: Push Docker image
@@ -53,7 +53,7 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker tag zainmk280/react-app zainmk280/react-app:v3
-          docker push zainmk280/react-app:v3
+           docker tag zainmk280/react-app zainmk280/my-react:v3
+           docker push zainmk280/my-react:v3
 
   
