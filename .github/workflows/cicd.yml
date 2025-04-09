@@ -53,7 +53,7 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-           docker tag zainmk280/react-app zainmk280/my-react:v3
+           docker tag zainmk280/my-react zainmk280/my-react:v3
            docker push zainmk280/my-react:v3
 
   
