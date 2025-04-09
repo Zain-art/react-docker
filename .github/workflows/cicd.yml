@@ -42,7 +42,7 @@ jobs:
       # Build Docker image
       - name: Build Docker image
         run: |
-          docker build -t zainmk280/react-app:v3 -f C:\Users\Zain Khan\Documents\GitHub\my-app\Dockerfile .
+          docker buildx build -t zainmk280/react-app:v3 -f C:\Users\Zain Khan\Documents\GitHub\my-app\Dockerfile .
 
       # Optionally, push the image to Docker Hub (replace with your DockerHub credentials)
       - name: Push Docker image
