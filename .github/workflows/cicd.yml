@@ -42,7 +42,7 @@ jobs:
       # Build Docker image
       - name: Build Docker image
         run: |
-          docker buildx build -t my-react:v1 -f Dockerfile .
+          docker build -t my-react:v1 .
 
       # List Docker images to verify the image exists
       - name: List Docker images
@@ -57,8 +57,8 @@ jobs:
 
       # Tag Docker image with Docker Hub repo name
       - name: Tag Docker image
-        run: docker tag my-react:v1 zainmk280/my-react:v1
+        run: docker tag my-react:v1 zainmk280/my-react:v2
 
       # Push Docker image to Docker Hub
       - name: Push Docker image to Docker-Hub
-        run: docker push zainmk280/my-react:v1
+        run: docker push zainmk280/my-react:v2
